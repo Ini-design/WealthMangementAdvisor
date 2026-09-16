@@ -1,0 +1,13 @@
+fastapi
+uvicorn[standard]
+slowapi
+google-genai
+sentence-transformers
+faiss-cpu
+numpy
+datasets
+huggingface_hub
+httpx
+pydantic
+orjson
+sse-starlette
