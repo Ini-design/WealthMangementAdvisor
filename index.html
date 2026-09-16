@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Finance Material | Financial Research Assistant</title>
+    <meta
+        name="description"
+        content="AI-powered financial research assistant using retrieval-augmented generation."
+    >
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="navbar">
+    <div class="nav-container">
+        <a href="/" class="brand">
+            <span class="brand-mark">F</span>
+            <span>
+                <strong>Finance Material</strong>
+                <small>Financial Research Assistant</small>
+            </span>
+        </a>
+
+        <div class="nav-actions">
+            <div class="connection-status">
+                <span id="statusDot" class="status-dot"></span>
+                <span id="statusText">Checking system...</span>
+            </div>
+
+            <button id="aboutBtn" class="about-btn">
+                About
+            </button>
+        </div>
+    </div>
+</header>
+
+
+<main>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-content">
+
+            <div class="eyebrow">
+                AI-POWERED FINANCIAL RESEARCH
+            </div>
+
+            <h1>
+                Make sense of
+                <span>financial information.</span>
+            </h1>
+
+            <p>
+                Ask questions about financial concepts, investment principles,
+                market information, and financial research. Finance Material
+                retrieves relevant context before generating an answer.
+            </p>
+
+        </div>
+    </section>
+
+
+    <!-- ASK -->
+    <section class="workspace">
+
+        <div class="ask-card">
+
+            <div class="card-header">
+                <div>
+                    <span class="section-label">Research assistant</span>
+                    <h2>What would you like to understand?</h2>
+                </div>
+
+                <span class="ai-badge">
+                    AI
+                </span>
+            </div>
+
+            <div class="input-wrapper">
+
+                <textarea
+                    id="queryInput"
+                    maxlength="500"
+                    rows="5"
+                    placeholder="Ask a financial research question..."
+                ></textarea>
+
+                <div class="input-footer">
+                    <span id="charCount">0 / 500</span>
+
+                    <button id="askBtn" class="ask-btn">
+                        <span id="askBtnText">Analyze</span>
+                        <span class="arrow">→</span>
+                    </button>
+                </div>
+
+            </div>
+
+
+            <div class="quick-section">
+                <span>Try an example</span>
+
+                <div class="quick-chips">
+
+                    <button class="quick-chip">
+                        How should investors approach inflation?
+                    </button>
+
+                    <button class="quick-chip">
+                        What risks should investors consider?
+                    </button>
+
+                    <button class="quick-chip">
+                        What is diversification?
+                    </button>
+
+                    <button class="quick-chip">
+                        How does compound interest work?
+                    </button>
+
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- ANSWER -->
+        <section id="answerSection" class="answer-section hidden">
+
+            <div class="answer-header">
+
+                <div>
+                    <span class="section-label">Research result</span>
+                    <h2>Financial insight</h2>
+                </div>
+
+                <button id="newQuestionBtn" class="secondary-btn">
+                    New question
+                </button>
+
+            </div>
+
+            <div class="answer-card">
+
+                <div class="answer-meta">
+                    <span class="ai-badge">AI GENERATED</span>
+                    <span class="research-label">
+                        Retrieval-augmented response
+                    </span>
+                </div>
+
+                <div id="typingIndicator" class="typing-indicator hidden">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <p>Analyzing financial context...</p>
+                </div>
+
+                <div
+                    id="answerContent"
+                    class="answer-content"
+                ></div>
+
+            </div>
+
+        </section>
+
+
+        <!-- SYSTEM INFO -->
+        <section class="info-grid">
+
+            <div class="info-card">
+                <div class="info-icon">R</div>
+
+                <div>
+                    <span>Architecture</span>
+                    <h3>RAG</h3>
+                    <p>
+                        Relevant financial context is retrieved before
+                        generation.
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="info-card">
+                <div class="info-icon">G</div>
+
+                <div>
+                    <span>Generation</span>
+                    <h3>Gemini</h3>
+                    <p>
+                        Responses are generated with a modern language model.
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="info-card">
+                <div class="info-icon">M</div>
+
+                <div>
+                    <span>Context</span>
+                    <h3>Market data</h3>
+                    <p>
+                      External market data can be integrated for current financial context.
+                    </p>
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- HOW IT WORKS -->
+        <section class="how-section">
+
+            <div class="section-heading">
+                <span class="section-label">Behind the system</span>
+                <h2>How it works</h2>
+            </div>
+
+            <div class="steps">
+
+                <div class="step">
+                    <div class="step-number">01</div>
+
+                    <div>
+                        <h3>Ask</h3>
+                        <p>
+                            Submit a financial research question.
+                        </p>
+                    </div>
+                </div>
+
+
+                <div class="step">
+                    <div class="step-number">02</div>
+
+                    <div>
+                        <h3>Retrieve</h3>
+                        <p>
+                            The system searches its financial knowledge base
+                            using semantic similarity.
+                        </p>
+                    </div>
+                </div>
+
+
+                <div class="step">
+                    <div class="step-number">03</div>
+
+                    <div>
+                        <h3>Analyze</h3>
+                        <p>
+                            Gemini uses the retrieved context to formulate
+                            an evidence-aware response.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- DISCLAIMER -->
+        <div class="disclaimer">
+            <strong>Educational use only.</strong>
+            Finance Material provides financial information and research
+            assistance. It does not provide guaranteed returns or replace
+            professional financial advice.
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer>
+    <div class="footer-container">
+        <span>Finance Material</span>
+        <span>AI-powered financial research</span>
+    </div>
+</footer>
+
+
+<!-- ABOUT MODAL -->
+<div id="aboutModal" class="modal hidden">
+
+    <div class="modal-overlay"></div>
+
+    <div class="modal-card">
+
+        <button id="closeModal" class="close-modal">
+            ×
+        </button>
+
+        <span class="section-label">About the project</span>
+
+        <h2>Finance Material</h2>
+
+        <p>
+            Finance Material is a financial research assistant designed to
+            demonstrate how retrieval-augmented generation can be combined
+            with financial information and external market context.
+        </p>
+
+        <div class="modal-stack">
+
+            <div>
+                <strong>Semantic retrieval</strong>
+                <span>FAISS + sentence embeddings</span>
+            </div>
+
+            <div>
+                <strong>AI generation</strong>
+                <span>Gemini</span>
+            </div>
+
+            <div>
+                <strong>Backend</strong>
+                <span>FastAPI</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
