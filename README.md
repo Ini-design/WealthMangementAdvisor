@@ -51,7 +51,7 @@ For a 4 GB host:
 
 - Use one Uvicorn worker only.
 - Do not run multiple replicas on the same host.
-- Keep `DATASET_SPLIT` at `train[:2000]` or reduce it.
+- Keep `DATASET_SPLIT` at `train[:800]` or reduce it.
 - Build `finance.index` and `finance_docs.json` once, then reuse them.
 - Leave at least 1 GB of free disk space for model and dataset caches.
 - Monitor memory during the first start; use a 6 to 8 GB host if it is killed by the platform.
